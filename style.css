@@ -1,0 +1,116 @@
+@keyframes colorChange {
+    0% { background: linear-gradient(to right, rgb(8, 8, 249), rgb(248, 8, 8)); }
+    25% { background: linear-gradient(to right, rgb(251, 121, 70), rgb(91, 169, 247)); }
+    50% { background: linear-gradient(to right, rgb(248, 77, 202), rgb(66, 248, 133)); }
+    75% { background: linear-gradient(to right, rgb(46, 141, 165), rgb(95, 36, 89)); }
+    100% { background: linear-gradient(to right, rgb(142, 214, 250), rgb(215, 86, 238)); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    animation: colorChange 10s infinite;
+}
+
+header {
+    background-color: rgb(18, 15, 15);
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #251e1e;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.home, .login, .search, .mem, .check, .book, .manage, .manage2, .manage3 {
+    margin: 2px;
+    border: 2px solid black;
+    background: linear-gradient(to right, rgb(46, 46, 165), rgb(244, 94, 94));
+    box-shadow: 15px 15px 15px rgb(30, 24, 24);
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: medium;
+}
+
+.home {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login, .search, .mem, .check, .manage, .manage2, .manage3 {
+    width: 400px;
+    height: 300px;
+}
+
+.book {
+    width: 400px;
+    height: 500px;
+}
+
+.b {
+    text-align: center;
+}
+
+/* Responsive styling for mobile devices */
+@media only screen and (max-width: 768px) {
+    .home, .login, .search, .mem, .check, .book, .manage, .manage2, .manage3 {
+        width: 100%;
+        height: auto;
+        font-size: small;
+        margin: 5px 0;
+    }
+
+    header, footer {
+        text-align: center;
+        padding: 5px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .book {
+        height: auto;
+    }
+}
